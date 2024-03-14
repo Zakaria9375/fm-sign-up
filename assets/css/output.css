@@ -589,11 +589,6 @@ p {
   margin-right: auto;
 }
 
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -634,14 +629,6 @@ p {
   width: 100%;
 }
 
-.max-w-\[376px\] {
-  max-width: 376px;
-}
-
-.max-w-\[504px\] {
-  max-width: 504px;
-}
-
 .max-w-\[928px\] {
   max-width: 928px;
 }
@@ -662,18 +649,10 @@ p {
   justify-content: space-between;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(10px * var(--tw-space-y-reverse));
-}
-
-.rounded-\[36px\] {
-  border-radius: 36px;
 }
 
 .rounded-lg {
@@ -703,11 +682,6 @@ p {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -716,14 +690,6 @@ p {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
-}
-
-.pt-12 {
-  padding-top: 3rem;
 }
 
 .text-\[12px\] {
@@ -758,10 +724,12 @@ p {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow-main {
-  --tw-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
-  --tw-shadow-colored: 0px 15px 60px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.not-displayed {
+  display: none;
+}
+
+.displayed {
+  display: block;
 }
 
 .btn:hover {
@@ -876,10 +844,6 @@ p {
   .lmd\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .lmd\:pt-10 {
-    padding-top: 2.5rem;
   }
 }
 	

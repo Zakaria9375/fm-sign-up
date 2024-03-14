@@ -1,23 +1,21 @@
 import {
 	createApp,
-	computed,
+	onMounted,
 	ref,
 	watch
 } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
-
+	
+	
 
 createApp({
 	setup() {
+		const loaded = ref(true)
 		const isSubmitted = ref(false);
 		const email = ref("");
 		const error = ref(false);
 		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		function reset () {
-			email.value = ""
-			isSubmitted.value = false;
-			error.value = false
-		}
+		
 		function onSubmit() {
 			if(email.value !== "" && !error.value) {
 				isSubmitted.value = true;
@@ -32,7 +30,13 @@ createApp({
 				error.value = true;
 			}
 		});
+		function reset() {
+			email.value = "";
+			isSubmitted.value = false;
+			error.value = false;
+		}
 		return {
+			loaded,
 			isSubmitted,
 			email,
 			error,
