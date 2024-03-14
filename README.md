@@ -26,7 +26,7 @@ npm install
 ## Links
 
 * [Challenge](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv)  
-* [Live]((<https://zakaria9375.github.io/fm-sign-up/>)
+* [Live](https://zakaria9375.github.io/fm-sign-up/)
 
 ## Author
 
