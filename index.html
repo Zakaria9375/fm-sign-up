@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<!-- Style -->
+	<link rel="stylesheet" href="./assets/css/output.css">
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+</head>
+<body class="md:zflex md:bg-coal lmd:bg-white min-h-dvh">
+	<main id="app" class="md:flex-1 md:mx-4 lmd:w-full">
+		<div v-if="!isSubmitted" class="md:rounded-[36px] bg-white md:p-6 zflex md:flex-row-reverse lmd:flex-col md:gap-6 max-w-[928px] mx-auto lmd:w-full md:shadow-main">
+			<picture class="lmd:w-full">
+				<source media="(max-width: 768px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+				<source media="(min-width: 768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+				<img class="lmd:w-full" src="./assets/images/illustration-sign-up-desktop.svg" alt="illustration">
+			</picture>
+			<section class="flex-1 md:max-w-[376px] md:mx-auto lmd:px-5 lmd:py-10">
+				<h1 class="mb-6">Stay updated!</h1>
+				<p class="mb-6">Join 60,000+ product managers receiving monthly updates on:</p>
+				<ul class="list space-y-[10px] mb-10">
+					<li>
+						<img src="./assets/images/icon-list.svg" alt="list-icon">
+						<p>Product discovery and building what matters</p>
+					</li>
+					<li>
+						<img src="./assets/images/icon-list.svg" alt="list-icon">
+						<p>Measuring to ensure updates are a success</p>
+					</li>
+					<li>
+						<img src="./assets/images/icon-list.svg" alt="list-icon">
+						<p>And much more!</p>
+					</li>
+				</ul>
+				<form @submit.prevent="onSubmit">
+					<div class="mb-2 flex items-center justify-between  ">
+						<label for="email" class="text-navy text-[12px] leading-[18px] font-bold">Email address</label>
+						<span v-if="error" class="text-tomato text-[12px] leading-[18px] font-bold">Valid email required</span>
+					</div>
+					<input type="email" v-model="email" id="email" class="px-6 py-4 rounded-lg border border-grey border-opacity-25 w-full tetx-base focus:border-navy" :class="{error: error}" placeholder="email@company.com" autocomplete="email" >
+					<button type="submit" class="text-base text-white font-bold w-full h-14 rounded-lg bg-navy mt-6 btn">Subscribe to monthly newsletter</button>
+				</form>
+			</section>
+		</div>
+		<div v-else class="md:shadow-main md:rounded-[36px] bg-white md:px-16 md:pb-16 md:pt-12 mx-auto md:max-w-[504px] lmd:px-5 lmd:py-10 lmd:min-h-dvh lmd:flex flex-col justify-between">
+			<div class="mt-[110px]">
+				<img src="/assets/images/icon-success.svg" alt="success">
+			<h1 class="mb-6 mt-10">Thanks for subscribing!</h1>
+			<p>A confirmation email has been sent to <span class="font-bold">{{ email }}</span>.
+			Please open it and click the button inside to confirm your subscription.</p>
+			</div>
+			
+			<button @click="reset" type="button" class="bg-navy rounded-lg text-base font-bold btn mt-10 w-full h-14 text-white">Dismiss message</button>
+		</div>
+	</main>
+	<script src="./main.js" type="module"></script>
+</body>
+</html>

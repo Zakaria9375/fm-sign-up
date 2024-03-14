@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply font-bold text-[40px] md:text-[56px] text-navy leading-none;
+	}
+	p {
+		@apply text-base text-navy
+	}
+}
+
+@layer components {
+	.zflex {
+		@apply flex items-center justify-center;
+	}
+	.list li {
+		@apply flex gap-4;
+	}
+	.error {
+		@apply border-tomato text-tomato bg-error
+	}
+}
+.btn:hover {
+		background: linear-gradient(204deg, #FF6A3A 0%, #FF527B 100%);
+		box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+	}
+	
