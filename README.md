@@ -18,7 +18,7 @@ To run this app in development mode open the terminal and write the following:
 
 ```sh  
 git clone https://github.com/Zakaria9375/fm-sign-up.git  
-cd fm-sing-up  
+cd fm-sign-up  
 npm install  
 //Then open index.html with live server
 ```
